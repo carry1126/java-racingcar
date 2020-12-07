@@ -6,6 +6,7 @@ public class StringCalculator {
 
     private static Map<String, Operator> operators = new HashMap<>();
 
+    //클래스가 로딩 될 때 초기화가 수행되도록, static 초기화
     static {
         for (Operator value : Operator.values())
             operators.put(value.operator, value);
