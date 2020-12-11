@@ -17,7 +17,7 @@ public class Car {
         }
     }
 
-    public int randomValue() {
+    protected int randomValue() {
         int randomNum = random.nextInt(10);
         return randomNum;
     }
