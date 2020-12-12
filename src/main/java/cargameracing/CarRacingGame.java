@@ -19,16 +19,16 @@ public class CarRacingGame {
     }
 
     public void playGame() {
+/*
         for (int j = 0; j < cars.length; j++) {
             int num = randomValue();
             cars[j].junjinUp(num);
         }
+*/
 
         //Java8 Stream API 이용
-/*
         IntStream.range(0, cars.length)
-                .forEach(index -> cars[index].junjinUp(num));
-*/
+                .forEach(index -> cars[index].junjinUp(randomValue()));
 
     }
 
