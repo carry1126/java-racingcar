@@ -29,4 +29,17 @@ public class CarRacingGameTest {
         assertThat(racingGame.cars[2].getJunjin()).isEqualTo(0);
 
     }
+
+    @Test
+    @DisplayName("랜덤 값이 4이상인지 확인")
+    void randomValue() {
+        CarRacingGame racingGame = new CarRacingGame(3) {
+          @Override
+          protected  int randomValue() {
+              return 5;
+          }
+        };
+        
+        assertThat(racingGame.randomValue()).isGreaterThanOrEqualTo(4);
+    }
 }

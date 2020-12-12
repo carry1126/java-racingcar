@@ -21,12 +21,7 @@ public class CarTest {
     @Test
     @DisplayName("랜덤값이 4 이상 값인지 체크")
     void randomValue() {
-        Car car = new Car() {
-            @Override
-            protected int randomValue() {
-                return 4;
-            }
-        };
-        assertThat(car.randomValue()).isGreaterThanOrEqualTo(3);
+        car.junjinUp(4);
+        assertThat(car.getJunjin()).isGreaterThanOrEqualTo(1);
     }
 }

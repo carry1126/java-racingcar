@@ -10,16 +10,11 @@ public class Car {
     Random random = new Random();
     private int junjin;
 
-    public void junjinUp() {
-        int num = randomValue();
+    public void junjinUp(int random) {
+        int num = random;
         if (num >= 4) {
             ++junjin;
         }
-    }
-
-    protected int randomValue() {
-        int randomNum = random.nextInt(10);
-        return randomNum;
     }
 
     public int getJunjin() {
