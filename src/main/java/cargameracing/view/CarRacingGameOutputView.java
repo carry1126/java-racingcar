@@ -1,6 +1,7 @@
-package cargameracing;
+package cargameracing.view;
 
-import java.util.ArrayList;
+import cargameracing.domain.Car;
+
 import java.util.List;
 
 /**
@@ -21,5 +22,17 @@ public class CarRacingGameOutputView {
         for (int j = 0; j < junjinCount; j++) {
             System.out.print("-");
         }
+    }
+
+    public static void displayWinners(List<String> winners) {
+        for (int i = 0; i < winners.size(); i++) {
+            if (i != winners.size() - 1) {
+                System.out.print(winners.get(i) + ", ");
+            }
+            if (i == winners.size() - 1) {
+                System.out.print(winners.get(i));
+            }
+        }
+        System.out.print("가 최종 우승했습니다.");
     }
 }
