@@ -1,8 +1,8 @@
 package cargameracing.domain;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Domain(Model) Role
@@ -31,13 +31,14 @@ public class CarRacingGame {
     }
     public TryNo getTryNo() { return this.tryNo; }
 
-    public List<String> displayFinalWinners() {
+    public List<Car> displayFinalWinners() {
        return filterWinners();
     }
 
-    public List<String> filterWinners() {
+    public List<Car> filterWinners() {
         int maxPosition = getMaxPosition();
 
+        /*
         List<String> winners = new ArrayList<>();
         for (Car car:cars) {
             if (maxPosition == car.getJunjin()) {
@@ -45,6 +46,11 @@ public class CarRacingGame {
             }
         }
         return winners;
+         */
+
+        return Arrays.stream(cars)
+                .filter(car -> car.isWinner(maxPosition))
+                .collect(Collectors.toList());
     }
 
     public int getMaxPosition() {

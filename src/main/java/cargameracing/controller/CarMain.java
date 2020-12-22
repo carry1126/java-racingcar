@@ -32,9 +32,9 @@ public class CarMain {
        while(carRacingGame.getTryNo().racing()) {
             carRacingGame.playGame(new RandomMovingStrategy());
             // CarRacingGameOutputView : 출력 View 객체
-           output.displayResult(carRacingGame.getCars());
+            CarRacingGameOutputView.displayResult(carRacingGame.getCars());
             System.out.println();
         }
-        output.displayFinalWinners(carRacingGame.displayFinalWinners());
+        CarRacingGameOutputView.displayFinalWinners(carRacingGame.displayFinalWinners());
     }
 }

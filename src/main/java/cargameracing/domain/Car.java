@@ -20,4 +20,16 @@ public class Car {
 
     public String getName() { return name.getName(); }
     public int getJunjin() { return junjin.getPosition(); }
+
+    public boolean isWinner(int maxPosition) {
+        return maxPosition == junjin.getPosition();
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "name=" + name +
+                ", junjin=" + junjin +
+                '}';
+    }
 }

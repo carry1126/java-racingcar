@@ -34,5 +34,12 @@ public class Position {
     public int hashCode() {
         return Objects.hash(junjin);
     }
+
+    @Override
+    public String toString() {
+        return "Position{" +
+                "junjin=" + junjin +
+                '}';
+    }
 }
 
